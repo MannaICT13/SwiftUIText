@@ -7,17 +7,50 @@
 //
 
 import SwiftUI
+import UIKit
+
+struct DateStruct : View{
+    
+    
+    static let dateFormatter : DateFormatter = {
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        return formatter
+    }()
+    
+    
+    var date = Date()
+    
+    var body : some View{
+        
+        Text ("Now Date is : \(date,formatter: Self.dateFormatter)")
+    }
+    
+    
+  
+}
+
 
 struct ContentView: View {
     
     var body: some View {
         
-        Text("Mawlana Bhashani Science and Technology University")
+     
+        VStack{
+            
+            Text("Mawlana Bhashani Science and Technology University")
             .lineLimit(nil)
             .foregroundColor(Color.blue)
             .background(Color.white)
             .font(.largeTitle)
             
+            DateStruct()
+                .font(.headline)
+            
+        }.padding()
+       
+    
         
     }
 }
