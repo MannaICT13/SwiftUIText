@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
+        
         Text("Mawlana Bhashani Science and Technology University")
+            .lineLimit(nil)
+            .foregroundColor(Color.blue)
+            .background(Color.white)
+            .font(.largeTitle)
+            
         
     }
 }
