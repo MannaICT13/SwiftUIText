@@ -64,12 +64,14 @@ struct ContentView: View {
             
             ConCatenationOfText()
                 .font(.headline)
+                .padding(20)
             
             DateStruct()
                 .font(.headline)
+                .padding(20)
             
             Text("Hello \nWorld \nHi").multilineTextAlignment(.leading)
-        }
+        }.padding()
        
     
         
