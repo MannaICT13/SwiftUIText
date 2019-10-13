@@ -9,6 +9,8 @@
 import SwiftUI
 import UIKit
 
+
+//Adding a Date Using Date and DateFormatter
 struct DateStruct : View{
     
     
@@ -31,24 +33,43 @@ struct DateStruct : View{
   
 }
 
+//Concatanation of Text
+struct ConCatenationOfText : View {
+    
+    var zipCode : Int = 1900
+    
+    var body : some View {
+        
+        Text("Santosh ") + Text("Tangail \(zipCode)")
+        
+    }
+}
 
+
+
+
+//Styling a Text
 struct ContentView: View {
     
     var body: some View {
         
      
-        VStack{
+        VStack(alignment:.center){
             
             Text("Mawlana Bhashani Science and Technology University")
             .lineLimit(nil)
             .foregroundColor(Color.blue)
             .background(Color.white)
-            .font(.largeTitle)
+            .font(.system(size: 26))
+            
+            ConCatenationOfText()
+                .font(.headline)
             
             DateStruct()
                 .font(.headline)
             
-        }.padding()
+            Text("Hello \nWorld \nHi").multilineTextAlignment(.leading)
+        }
        
     
         
